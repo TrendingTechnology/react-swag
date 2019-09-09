@@ -1,8 +1,9 @@
 {
     "main": "./build/build.min.js",
     "name": "react-swag",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "scripts": {
+        "prepublish": "npm run build",
         "build": "npm run lint && rollup  --config",
         "lint": "eslint index.js ./lib/* ./lib/mechanisms/* ./lib/public/* ./lib/utils/*  ./index.js --fix",
         "watch": "watch 'npm run build' ./lib "

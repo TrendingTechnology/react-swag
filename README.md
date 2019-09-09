@@ -6,6 +6,10 @@ SWAG is a straightforward ***React*** state manager wich sounds familiar for tho
 > **Note**: SWAG violates unidirecional data-flow premises.
 **This repo is still a place just for the ones that dont give a fuck abou it**. Thanks!
 
+[![build status](https://img.shields.io/travis/guisouza/react-swag/master.svg)](https://travis-ci.org/reduxjs/redux)
+[![npm version](https://img.shields.io/npm/v/react-swag.svg)](https://www.npmjs.com/package/react-swag)
+[![npm downloads](https://img.shields.io/npm/dm/react-swag.svg)](https://www.npmjs.com/package/react-swag)
+
 ## How it works : 
 ```javascript
 import { prepare, connect } from 'react-swag';
