@@ -6,9 +6,13 @@ SWAG is a straightforward ***React*** state manager wich sounds familiar for tho
 > **Note**: SWAG violates unidirecional data-flow premises.
 **This repo is still a place just for the ones that dont give a fuck abou it**. Thanks!
 
-[![build status](https://img.shields.io/travis/guisouza/react-swag/master.svg)](https://travis-ci.org/reduxjs/redux)
-[![npm version](https://img.shields.io/npm/v/react-swag.svg)](https://www.npmjs.com/package/react-swag)
-[![npm downloads](https://img.shields.io/npm/dm/react-swag.svg)](https://www.npmjs.com/package/react-swag)
+[![build status](https://img.shields.io/travis/guisouza/react-swag/master.svg?color=%23ee1958&logoColor=%23ee1958)](https://travis-ci.org/reduxjs/redux)
+[![npm version](https://img.shields.io/npm/v/react-swag.svg?color=%23ee1958&logoColor=%23ee1958)](https://www.npmjs.com/package/react-swag)
+[![npm downloads](https://img.shields.io/npm/dm/react-swag.svg?color=%23ee1958&logoColor=%23ee1958)](https://www.npmjs.com/package/react-swag)
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/guisouza/react-swag?color=%23ee1958&logoColor=%23ee1958)](https://codeclimate.com/github/guisouza/react-swag)
+[![Size](https://img.shields.io/bundlephobia/minzip/react-swag?color=%23ee1958&label=gzip%20size)]()
+[![MIT](https://img.shields.io/github/license/guisouza/react-swag?color=ee1958)]()
+
 
 ## How it works : 
 ```javascript
