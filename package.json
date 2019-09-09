@@ -1,18 +1,19 @@
 {
     "main": "./build/build.min.js",
     "name": "react-swag",
-    "version": "0.0.4",
+    "version": "0.0.6",
     "description": "SWAG is a straightforward React state manager wich sounds familiar for those who likes View-Model pattern.",
-    "license" : { 
+    "license": {
         "type": "MIT",
         "url": "https://www.opensource.org/licenses/mit-license.php"
     },
     "repository": "git@github.com:guisouza/react-swag.git",
-    "scripts": {
+    "scripts": {         
         "prepublish": "npm run build",
         "build": "npm run lint && rollup  --config",
         "lint": "eslint index.js ./lib/* ./lib/mechanisms/* ./lib/public/* ./lib/utils/*  ./index.js --fix",
-        "watch": "watch 'npm run build' ./lib "
+        "watch": "watch 'npm run build' ./lib ",
+        "run:example": "parcel ./examples/Lazy-Counter/index.html"
     },
     "peerDependencies": {
         "react": "^16.9.0",
@@ -25,6 +26,7 @@
         "babel-plugin-transform-es2015-spread": "^6.22.0",
         "eslint": "^6.3.0",
         "eslint-plugin-react": "^7.14.3",
+        "parcel-bundler": "^1.12.3",
         "rollup": "^1.21.0",
         "rollup-plugin-babel": "^4.3.3",
         "rollup-plugin-babel-minify": "^9.0.0",
@@ -32,5 +34,9 @@
         "rollup-plugin-node-resolve": "^5.2.0",
         "rollup-plugin-uglify": "^6.0.3",
         "watch": "^1.0.2"
+    },
+    "dependencies": {
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
     }
 }
