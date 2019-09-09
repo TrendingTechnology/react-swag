@@ -14,9 +14,14 @@ SWAG is a straightforward ***React*** state manager wich sounds familiar for tho
 [![MIT](https://img.shields.io/github/license/guisouza/react-swag?color=ee1958)]()
 
 
+## Install
+```
+npm install --save react-swag
+```
+
 ## How it works : 
 ```javascript
-import { prepare, connect } from 'react-swag';
+import { createStore, connect } from 'react-swag';
 
 //You can define your view-model as a plain javascript object
 const store = {
@@ -40,9 +45,9 @@ const ConnectedComponent = connect(Component, store);
 
 ***store.js***
 ```javascript
-import {prepare} from 'react-swag';
+import {createStore} from 'react-swag';
 
-export default prepare({
+export default createStore({
     counter: 1,
     increment(){
         this.counter++;
@@ -74,7 +79,7 @@ export default connect(Component2)
 
 ***store.js***
 ```javascript
-import {prepare} from 'react-swag';
+import {createStore} from 'react-swag';
 
 class Counter{
     constructor(initialValue){
@@ -85,14 +90,14 @@ class Counter{
     }
 }
 
-export default prepare(new Counter(1));
+export default createStore(new Counter(1));
 ```
 
 ## Store as Class
 
 ***store.js***
 ```javascript
-import {prepare} from 'react-swag';
+import {createStore} from 'react-swag';
 
 class Counter{
     constructor(initialValue){
@@ -103,13 +108,13 @@ class Counter{
     }
 }
 
-export default prepare(Counter);
+export default createStore(Counter);
 ```
 
 ## Dealing with async code execution
 
 ```javascript
-import { prepare, connect } from 'react-swag';
+import { createStore, connect } from 'react-swag';
 
 const store = {
     counter: 1,

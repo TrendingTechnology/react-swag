@@ -1,3 +1,3 @@
 import connect from './lib/connect';
-import prepare from './lib/prepare';
-export {connect, prepare};
+import createStore from './lib/createStore';
+export {connect, createStore};
