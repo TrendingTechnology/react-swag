@@ -4,5 +4,4 @@
 /.eslintrc.json
 /.npmignore
 /index.js
-/README.md
 /rollup.config.js
