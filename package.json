@@ -11,7 +11,7 @@
     "scripts": {
         "report-coverage": "codecov",
         "prepublish": "npm run build",
-        "build": "npm run lint && rollup  --config",
+        "build": "npm run test && npm run lint && rollup  --config",
         "lint": "eslint index.js ./lib/* ./lib/mechanisms/* ./lib/public/* ./lib/utils/*  ./index.js --fix",
         "watch": "watch 'npm run build' ./lib ",
         "run:example": "sh ./runDemo.sh",
