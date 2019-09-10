@@ -9,6 +9,7 @@
     },
     "repository": "git@github.com:guisouza/react-swag.git",
     "scripts": {
+        "report-coverage": "codecov",
         "prepublish": "npm run build",
         "build": "npm run lint && rollup  --config",
         "lint": "eslint index.js ./lib/* ./lib/mechanisms/* ./lib/public/* ./lib/utils/*  ./index.js --fix",

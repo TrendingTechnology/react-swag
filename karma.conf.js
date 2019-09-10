@@ -21,9 +21,10 @@ module.exports = function (config) {
             'lib/**/*.js': ['babel','coverage','commonjs'],
         },
         coverageReporter: {
-            type : 'lcov',
-            dir : '.',
-            subdir : '.'
+            reporters: [
+                {type:'lcovonly', subdir: '.'},
+                {type:'json', subdir: '.'},
+            ]
         }
     });
 };

@@ -4,14 +4,7 @@ cache: npm
 
 env:
   global:
-    - CC_TEST_REPORTER_ID=01d725dd63169cd003e1ea644eb6841b8734920b1ab9f9455a171d0ca4a49d73
+    - CODECOV_TOKEN="335481de-068b-4de9-9f8d-137fc39c1e0c"
 
-
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
 script:
   - npm run build
-after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
