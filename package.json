@@ -1,7 +1,7 @@
 {
     "main": "./build/build.min.js",
     "name": "react-swag",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "SWAG is a straightforward React state manager wich sounds familiar for those who likes View-Model pattern.",
     "license": {
         "type": "MIT",
@@ -16,8 +16,9 @@
         "watch": "watch 'npm run build' ./lib ",
         "run:example": "sh ./runDemo.sh",
         "test": "babel-node ./spec/run.js && npm run test:coverage",
+        "test:coverage": "nyc -r lcovonly jasmine",
         "test:dev": "nodemon --exec babel-node ./spec/run.js",
-        "test:coverage": "karma start --single-run --browsers jsdom"
+        "test:coverage-check": "nyc --reporter=html jasmine && open ./coverage/index.html"
     },
     "peerDependencies": {
         "react": "^16.9.0",
@@ -29,21 +30,15 @@
         "@babel/node": "7.6.1",
         "@babel/preset-env": "^7.6.0",
         "@babel/preset-react": "7.0.0",
-        "babel-plugin-istanbul": "^5.2.0",
+        "@istanbuljs/nyc-config-babel": "^2.1.1",
         "babel-plugin-transform-es2015-spread": "6.22.0",
         "eslint": "6.3.0",
         "eslint-plugin-react": "7.14.3",
-        "istanbul": "^0.4.5",
         "jasmine": "3.4.0",
         "jasmine-console-reporter": "^3.1.0",
         "jsdom": "^15.1.1",
-        "karma": "^4.3.0",
-        "karma-babel-preprocessor": "^8.0.1",
-        "karma-commonjs": "^1.0.0",
-        "karma-coverage": "^2.0.1",
-        "karma-jasmine": "^2.0.1",
-        "karma-jsdom-launcher": "^7.1.1",
         "nodemon": "^1.19.2",
+        "nyc": "^14.1.1",
         "parcel-bundler": "1.12.3",
         "react": "16.9.0",
         "react-dom": "16.9.0",

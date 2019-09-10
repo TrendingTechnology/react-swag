@@ -5,3 +5,7 @@
 /.npmignore
 /index.js
 /rollup.config.js
+/.nyc-output
+/coverage
+/examples
+/.cache
