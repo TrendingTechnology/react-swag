@@ -16,7 +16,7 @@
         "watch": "watch 'npm run build' ./lib ",
         "run:example": "sh ./runDemo.sh",
         "test": "babel-node ./spec/run.js && npm run test:coverage",
-        "test:dev": "karma start karma.conf.js",
+        "test:dev": "nodemon --exec babel-node ./spec/run.js",
         "test:coverage": "karma start --single-run --browsers jsdom"
     },
     "peerDependencies": {
@@ -35,6 +35,7 @@
         "eslint-plugin-react": "7.14.3",
         "istanbul": "^0.4.5",
         "jasmine": "3.4.0",
+        "jasmine-console-reporter": "^3.1.0",
         "jsdom": "^15.1.1",
         "karma": "^4.3.0",
         "karma-babel-preprocessor": "^8.0.1",
