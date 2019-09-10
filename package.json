@@ -14,8 +14,9 @@
         "lint": "eslint index.js ./lib/* ./lib/mechanisms/* ./lib/public/* ./lib/utils/*  ./index.js --fix",
         "watch": "watch 'npm run build' ./lib ",
         "run:example": "sh ./runDemo.sh",
-        "test": "babel-node ./spec/run.js",
-        "test:dev": "nodemon --exec babel-node ./spec/run.js"
+        "test": "babel-node ./spec/run.js && npm run test:coverage",
+        "test:dev": "karma start karma.conf.js",
+        "test:coverage": "karma start --single-run --browsers jsdom"
     },
     "peerDependencies": {
         "react": "^16.9.0",
@@ -23,14 +24,23 @@
     },
     "devDependencies": {
         "@babel/cli": "7.6.0",
-        "@babel/core": "7.6.0",
+        "@babel/core": "^7.6.0",
         "@babel/node": "7.6.1",
-        "@babel/preset-env": "7.6.0",
+        "@babel/preset-env": "^7.6.0",
         "@babel/preset-react": "7.0.0",
+        "babel-plugin-istanbul": "^5.2.0",
         "babel-plugin-transform-es2015-spread": "6.22.0",
         "eslint": "6.3.0",
         "eslint-plugin-react": "7.14.3",
+        "istanbul": "^0.4.5",
         "jasmine": "3.4.0",
+        "jsdom": "^15.1.1",
+        "karma": "^4.3.0",
+        "karma-babel-preprocessor": "^8.0.1",
+        "karma-commonjs": "^1.0.0",
+        "karma-coverage": "^2.0.1",
+        "karma-jasmine": "^2.0.1",
+        "karma-jsdom-launcher": "^7.1.1",
         "nodemon": "^1.19.2",
         "parcel-bundler": "1.12.3",
         "react": "16.9.0",
@@ -40,7 +50,6 @@
         "rollup-plugin-babel-minify": "9.0.0",
         "rollup-plugin-jsx": "1.0.3",
         "rollup-plugin-node-resolve": "5.2.0",
-        "rollup-plugin-uglify": "6.0.3",
-        "watch": "1.0.2"
+        "rollup-plugin-uglify": "6.0.3"
     }
 }

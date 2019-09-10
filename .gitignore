@@ -4,3 +4,5 @@ build
 package-lock.json
 .cache
 dist
+lcov.info
+lcov-report
