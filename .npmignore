@@ -1,3 +1,4 @@
+.DS_Store
 /lib
 /node_modules
 /.babelrc
@@ -9,3 +10,4 @@
 /coverage
 /examples
 /.cache
+/build

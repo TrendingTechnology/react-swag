@@ -16,7 +16,7 @@
         "watch": "watch 'npm run build' ./lib ",
         "run:example": "sh ./runDemo.sh",
         "test": "babel-node ./spec/run.js && npm run test:coverage",
-        "test:coverage": "nyc -r lcovonly jasmine",
+        "test:coverage": "nyc -r json jasmine",
         "test:dev": "nodemon --exec babel-node ./spec/run.js",
         "test:coverage-check": "nyc --reporter=html jasmine && open ./coverage/index.html"
     },
