@@ -15,7 +15,7 @@ module.exports = function (config) {
             {pattern:'lib/public/*.js'},
             {pattern:'lib/createStore.js'},
             {pattern:'lib/utils/*.js'},
-            {pattern:'lib/spec/*.js'},
+            {pattern:'lib/spec/**/*.js'},
         ],
         preprocessors: {
             'lib/**/*.js': ['babel','coverage','commonjs'],
