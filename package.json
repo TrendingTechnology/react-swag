@@ -1,14 +1,15 @@
 {
     "main": "./build/build.min.js",
     "name": "react-swag",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "description": "SWAG is a straightforward React state manager wich sounds familiar for those who likes View-Model pattern.",
     "license": "Apache-2.0",
     "repository": "git@github.com:guisouza/react-swag.git",
     "scripts": {
         "report-coverage": "codecov",
         "prepublish": "npm run build",
-        "build": "npm run test && npm run lint && rollup  --config",
+        "build":"",
+        "build:local": "npm run test && npm run lint && rollup  --config",
         "lint": "eslint index.js ./lib/* ./lib/mechanisms/* ./lib/public/* ./lib/utils/*  ./index.js --fix",
         "watch": "watch 'npm run build' ./lib ",
         "run:example": "sh ./runDemo.sh",
