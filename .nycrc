@@ -1,7 +1,7 @@
 {
     "extends": "@istanbuljs/nyc-config-babel",
     "all": true,
-    "include": ["lib/**/*.js"],
-    "exclude": ["**/*.spec.js"],
+    "include": ["lib/public/didMount.js","lib/public/set.js"],
+    "exclude": ["**/*.spec.js","lib/*.spec.js"],
     "instrument": true
 }
