@@ -1,7 +1,7 @@
 {
     "main": "./build/build.min.js",
     "name": "react-swag",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "description": "SWAG is a straightforward React state manager wich sounds familiar for those who likes View-Model pattern.",
     "license": {
         "type": "MIT",
