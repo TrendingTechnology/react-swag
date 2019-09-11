@@ -26,8 +26,8 @@ yarn add react-swag
 
 ###### You will need two things, **connect** and **createStore**
 
-- ##### ***connect***(ReactComponent, Store)
-- ##### ***createStore***(Object or Class)
+##### ★ ***connect***(ReactComponent, Store)
+##### ★ ***createStore***(Object or Class)
 
 You get than like this :
 
@@ -75,15 +75,15 @@ BOOM ! its  working.
 [LIVE DEMO ](https://travis-ci.org/guisouza/react-swag/)
 
 ### Things you need to know about SWAG
-- #### You can easily deal with async operations using **ing** helper
+#### 💎You can easily deal with async operations using **ing** helper
 
-- #### Your changes to the store will always sync to the UI.
+#### 💎Your changes to the store will always sync to the UI.
 
-- #### You can connect to portions of your store.
+#### 💎You can connect to portions of your store.
 
-- #### I am still thinking the whole nomenclature
+#### 💎I am still thinking the whole nomenclature
 
-- #### I`d love to hear yout opinion
+#### 💎I`d love to hear yout opinion
 
 ## License
 
