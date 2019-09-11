@@ -3,10 +3,7 @@
     "name": "react-swag",
     "version": "0.0.15",
     "description": "SWAG is a straightforward React state manager wich sounds familiar for those who likes View-Model pattern.",
-    "license": {
-        "type": "MIT",
-        "url": "https://www.opensource.org/licenses/mit-license.php"
-    },
+    "license": "Apache-2.0",
     "repository": "git@github.com:guisouza/react-swag.git",
     "scripts": {
         "report-coverage": "codecov",
