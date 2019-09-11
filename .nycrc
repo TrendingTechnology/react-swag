@@ -7,7 +7,7 @@
         "lib/public/didMount.js",
         "lib/public/willUnmount.js",
         "lib/public/set.js",
-        "lib/connect.js"
+        "lib/connect.js",
         "lib/utils/generateId.js"
         ],
     "instrument": true
