@@ -1,10 +1,7 @@
 
 # <img src='https://i.imgur.com/Z74bS7R.png' height='60' alt='SWAG Logo' aria-label='redux.js.org' />
 
-SWAG is a straightforward ***React*** state manager wich sounds familiar for those who likes ***View-Model*** pattern.
-
-> **Note**: SWAG violates unidirecional data-flow premises.
-**This repo is still a place just for the ones that dont give a fuck abou it**. Thanks!
+##### SWAG is a straightforward ***React*** state manager wich sounds familiar for those who likes ***View-Model*** pattern.
 
 [![build status](https://img.shields.io/travis/guisouza/react-swag/master.svg?color=%23ee1958&logoColor=%23ee1958)](https://travis-ci.org/guisouza/react-swag/)
 [![code coverage](https://img.shields.io/codecov/c/github/guisouza/react-swag?color=%23ee1958)](https://codecov.io/gh/guisouza/react-swag)
@@ -20,148 +17,73 @@ SWAG is a straightforward ***React*** state manager wich sounds familiar for tho
 npm install --save react-swag
 ```
 
-## How it works : 
-```javascript
-import { createStore, connect } from 'react-swag';
-
-//You can define your view-model as a plain javascript object
-const store = {
-    counter: 1,
-    increment(){
-        this.counter++;
-    }
-}
-
-//Define the component you will connect to your store, access properties from store and methods from actions
-const Component = ({store, actions}) => (
-    <div onClick={actions.increment}>
-        {store.counter}
-    </div>)
-
-//connect your store and component
-const ConnectedComponent = connect(Component, store);
+```
+yarn add react-swag
 ```
 
-## Reusing the Store
 
-***store.js***
-```javascript
-import {createStore} from 'react-swag';
+## Basic Setup 
 
-export default createStore({
-    counter: 1,
-    increment(){
-        this.counter++;
-    }
-})
-```
+###### You will need two things, **connect** and **createStore**
 
-***component1.js***
-```javascript
-import {connect} from 'react-swag';
-import store from 'store.js';
+- ##### ***connect***(ReactComponent, Store)
+- ##### ***createStore***(Object or Class)
 
-const Component1 = ({store}) => (<p>{store.counter}</p>)
-
-export default connect(Component1)
-```
-
-***component2.js***
-```javascript
-import {connect} from 'react-swag';
-import store from 'store.js';
-
-const Component2 = ({actions}) =><input type="buton" onClick={actions.increment} />
-
-export default connect(Component2)
-```
-
-## Store as Class Instance
-
-***store.js***
-```javascript
-import {createStore} from 'react-swag';
-
-class Counter{
-    constructor(initialValue){
-        this.counter = initialValue
-    }
-    increment(){
-        this.counter++;
-    }
-}
-
-export default createStore(new Counter(1));
-```
-
-## Store as Class
-
-***store.js***
-```javascript
-import {createStore} from 'react-swag';
-
-class Counter{
-    constructor(initialValue){
-        this.counter = initialValue
-    }
-    increment(){
-        this.counter++;
-    }
-}
-
-export default createStore(Counter);
-```
-
-## Dealing with async code execution
+You get than like this :
 
 ```javascript
 import { createStore, connect } from 'react-swag';
+```
+
+Now you would like to create your store, with your data and methods as object properties.
+```javascript
 
 const store = {
     counter: 1,
-    increment(){
+    add(){
         this.counter++;
     }
 }
-
-const Component = ({store, actions, ing}) => (
-    <div onClick={actions.increment}>
-        {ing(actions.increment) ? 'LOADING...' : store.counter}
-    </div>)
-
-const ConnectedComponent = connect(Component, store);
+// you could also do this :
+class Store = {
+    constructor(){
+        this.counter = 1
+    }
+    add(){
+        this.counter++
+    }
+}
 ```
 
-# Documentation
+Now you create your presentation layer as a React Component accessing your store methods through `actions` prop and your props through `store`
 
-## Component API
-
-The Component API is injected into your store connected component as props.
 
 ```javascript
-import { connect }  from 'react-swag';
-const Component = props => {
-    const { didMount,unmount,set,ing } = props;
-    return <p>hello world!</p>
-}
-
-export default connect(Component,store)
-
+const Component = ({store,actions}) => (
+    <div onClick={actions.add}>{store.counter}</div>
+)
 ```
+now connect your component to the store ; 
 
-##### ing(method[,params])
-    ing is a uttility function which receives a method that returns a promise, and return true, if this method was called and hasnt returned yet
+```javascript
+const ConnectedComponent = connect(Component, store);
+```
+BOOM ! its  working.
 
+![Demo](http://g.recordit.co/gVkCandDWV.gif)
 
+[LIVE DEMO ](https://travis-ci.org/guisouza/react-swag/)
 
-##### set(prop[,value])
+### Things you need to know about SWAG
+- #### You can easily deal with async operations using **ing** helper
 
-##### didMount(fn)
+- #### Your changes to the store will always sync to the UI.
 
-##### unmount(fn)
+- #### You can connect to portions of your store.
 
-## Store Definition
+- #### I am still thinking the whole nomenclature
 
+- #### I`d love to hear yout opinion
 
 ## License
 
