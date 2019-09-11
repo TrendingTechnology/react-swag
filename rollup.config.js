@@ -8,6 +8,7 @@ export default {
     name: 'bundle',
     format: "cjs"
   },
+  external: [ 'react' ],
   input: './index.js',
   plugins: [,
     babel({
