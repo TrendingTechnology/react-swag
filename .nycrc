@@ -2,6 +2,13 @@
     "extends": "@istanbuljs/nyc-config-babel",
     "all": true,
     "include": ["lib/**/*.js"],
-    "exclude": ["**/*.spec.js","lib/public/didMount.js","lib/public/set.js","lib/connect.js"],
+    "exclude": [
+        "**/*.spec.js",
+        "lib/public/didMount.js",
+        "lib/public/willUnmount.js",
+        "lib/public/set.js",
+        "lib/connect.js"
+        "lib/utils/generateId.js"
+        ],
     "instrument": true
 }
