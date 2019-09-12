@@ -72,7 +72,7 @@ BOOM ! its  working.
 
 ![Demo](http://g.recordit.co/gVkCandDWV.gif)
 
-[LIVE DEMO ](https://travis-ci.org/guisouza/react-swag/)
+[LIVE DEMO ](https://codesandbox.io/s/modern-cdn-weole)
 
 ### Things you need to know about SWAG
 #### 💎You can easily deal with async operations using **ing** helper
