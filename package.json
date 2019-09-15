@@ -8,7 +8,7 @@
     "scripts": {
         "report-coverage": "codecov",
         "prepublish": "npm run build",
-        "build":"",
+        "build":"npm test",
         "build:local": "npm run test && npm run lint && rollup  --config",
         "lint": "eslint index.js ./lib/* ./lib/mechanisms/* ./lib/public/* ./lib/utils/*  ./index.js --fix",
         "watch": "watch 'npm run build' ./lib ",
