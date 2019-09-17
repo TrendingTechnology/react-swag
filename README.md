@@ -55,15 +55,14 @@ class Store = {
 }
 ```
 
-Now you create your presentation layer as a React Component accessing your store methods through `actions` prop and your props through `store`
-
+Now you create your presentation layer as a React Component directly accessing your store
 
 ```javascript
-const Component = ({store,actions}) => (
-    <div onClick={actions.add}>{store.counter}</div>
+const Component = () => (
+    <div onClick={Store.add}>{Store.counter}</div>
 )
 ```
-now connect your component to the store ; 
+now connect your component to the store if you want it to update on store changes 
 
 ```javascript
 const ConnectedComponent = connect(Component, store);
@@ -76,10 +75,19 @@ BOOM ! its  working.
 
 ### Things you need to know about SWAG
 #### 💎You can easily deal with async operations using **ing** helper
+![Demo](http://g.recordit.co/gVkCandDWV.gif)
+
+[LIVE DEMO ](https://codesandbox.io/s/modern-cdn-weole)
 
 #### 💎Your changes to the store will always sync to the UI.
+![Demo](http://g.recordit.co/gVkCandDWV.gif)
+
+[LIVE DEMO ](https://codesandbox.io/s/modern-cdn-weole)
 
 #### 💎You can connect to portions of your store.
+![Demo](http://g.recordit.co/gVkCandDWV.gif)
+
+[LIVE DEMO ](https://codesandbox.io/s/modern-cdn-weole)
 
 #### 💎I am still thinking the whole nomenclature
 

@@ -6,3 +6,4 @@ package-lock.json
 dist
 lcov.info
 lcov-report
+.nyc_output
